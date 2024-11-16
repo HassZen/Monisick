@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/medication_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Obat" />
+
+    <EditText
+        android:id="@+id/medication_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jumlah Obat" />
+
+    <RadioGroup
+        android:id="@+id/intake_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/before_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diminum Sebelum Makan" />
+
+        <RadioButton
+            android:id="@+id/after_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diminum Setelah Makan" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/morning_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pagi" />
+
+    <CheckBox
+        android:id="@+id/afternoon_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siang" />
+
+    <CheckBox
+        android:id="@+id/evening_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Malam" />
+</LinearLayout>

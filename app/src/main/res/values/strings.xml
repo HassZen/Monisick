@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Monisick</string>
+    <string name="title_home">Dasboard</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_history">History</string>
+
+    <string name="placeholder_description">Health Monitor Placeholder</string>
+
+</resources>
