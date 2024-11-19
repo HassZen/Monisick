@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Monisick"
         tools:targetApi="31">
         <activity
+            android:name=".ui.history.ScheduleDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.history.AddScheduleActivity"
             android:exported="false" />
         <activity

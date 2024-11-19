@@ -1,6 +1,7 @@
 package com.capstone.monisick.database.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.capstone.monisick.database.entity.Schedule
@@ -12,4 +13,7 @@ interface ScheduleDao {
 
     @Query("SELECT * FROM schedules")
     suspend fun getAllSchedules(): List<Schedule>
+
+    @Delete
+    suspend fun delete(schedule: Schedule)
 }

@@ -3,6 +3,7 @@ package com.capstone.monisick.ui.history
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,12 +36,25 @@ class HistoryFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-
         lifecycleScope.launch {
+            val schedules = db.scheduleDao().getAllSchedules().toMutableList()
 
-            val schedules = db.scheduleDao().getAllSchedules()
+            adapter = HistoryAdapter(schedules) { schedule ->
+                // Konfirmasi penghapusan
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Hapus Jadwal")
+                    .setMessage("Apakah Anda yakin ingin menghapus jadwal ini?")
+                    .setPositiveButton("Hapus") { _, _ ->
+                        lifecycleScope.launch {
+                            db.scheduleDao().delete(schedule)
+                            val updatedSchedules = db.scheduleDao().getAllSchedules()
+                            adapter.updateData(updatedSchedules)
+                        }
+                    }
+                    .setNegativeButton("Batal", null)
+                    .show()
+            }
 
-            adapter = HistoryAdapter(schedules)
             recyclerView.adapter = adapter
         }
 
