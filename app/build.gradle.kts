@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -27,51 +29,82 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
 
+    // Core dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
-    //Layout
+    // Layout
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.activity)
+    implementation("androidx.cardview:cardview:1.0.0")
 
-    //Testing
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //viewModel
-    implementation(libs.androidx.lifecycle.livedata.ktx)
+    // ViewModel & LiveData
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
-    //Navigation
+    // Navigation
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    //Design
-    implementation("androidx.cardview:cardview:1.0.0")
-
-    //Room Database
+    // Room Database
     implementation("androidx.room:room-runtime:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 
-    //Room DAO - dependencies sudah termasuk dalam room-runtime
-    implementation("androidx.room:room-ktx:2.6.1") // Optional but recommended for easier use of Room with Kotlin
+    // DataStore
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation("androidx.datastore:datastore-core:1.1.1")
 
-    //For testing Room (if needed)
-    androidTestImplementation("androidx.room:room-testing:2.6.1")
+    // Design and utilities
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.github.kirich1409:viewbindingpropertydelegate:1.5.3")
+
+    // Image and network libraries
+    implementation("com.github.bumptech.glide:glide:4.15.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+
+    // Coroutine support
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0-RC")
+
+    // Moshi for JSON
+    implementation("com.squareup.moshi:moshi:1.13.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+
+    // CameraX
+    implementation("androidx.camera:camera-camera2:1.4.0-beta01")
+    implementation("androidx.camera:camera-lifecycle:1.4.0-beta01")
+    implementation("androidx.camera:camera-view:1.4.0-beta01")
+
+    // WorkManager
+    implementation("androidx.work:work-runtime:2.8.1")
+
+    // Async HTTP Client
+    implementation("com.loopj.android:android-async-http:1.4.10")
 }

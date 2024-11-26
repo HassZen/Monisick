@@ -32,11 +32,6 @@ class AddScheduleActivity : AppCompatActivity() {
         // Inisialisasi database
         db = AppDatabase.getDatabase(this)
 
-        // Menampilkan dialog untuk memilih tanggal mulai dan selesai
-        binding.inputPeriod.setOnClickListener {
-            // Tampilkan date picker dialog untuk memilih start date dan end date
-        }
-
         binding.addObatButton.setOnClickListener {
             // Membuka form dialog untuk menambah obat
             showAddMedicationDialog()

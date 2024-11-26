@@ -6,4 +6,19 @@
 
     <string name="placeholder_description">Health Monitor Placeholder</string>
 
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="email_error">Invalid email format.</string>
+    <string name="password_error">Password must at least 8 chars.</string>
+    <string name="password_confirmation_hint">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="name_error">Name musn\'t be empty!</string>
+    <string name="form_error">Form must be filled correctly.</string>
+
+    <string name="input_name">Enter Your Username</string>
+    <string name="input_email">Enter Your Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="empty_pass">Password Empty</string>
+    <string name="logout">logout</string>
+
 </resources>
