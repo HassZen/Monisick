@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timeSelectionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Nama Pasien -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Name"
+            android:hint="@string/patient_name"
+            android:inputType="textPersonName" />
+
+        <ImageView
+            android:id="@+id/error_icon_name"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/error_icon_name_patient"
+            android:src="@drawable/ic_baseline_error_24"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Tanggal Mulai -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Tanggal Mulai"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/start_date"
+            android:inputType="date"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <ImageView
+            android:id="@+id/error_icon_start_date"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/error_icon_start_date"
+            android:src="@drawable/ic_baseline_error_24"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Tanggal Selesai -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Tanggal Selesai"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="@string/end_date"
+            android:inputType="date"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+        <ImageView
+            android:id="@+id/error_icon_end_date"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/error_icon_end_date"
+            android:src="@drawable/ic_baseline_error_24"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Data Obat -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/medicine_data"
+        android:textSize="16sp" />
+
+    <!-- Nama Obat -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/medication_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Nama Obat"
+            android:hint="@string/medicine_name"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/error_icon_medication_name"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/error_icon_medicine_name"
+            android:src="@drawable/ic_baseline_error_24"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Jumlah Obat -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/medication_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Jumlah Obat"
+            android:hint="@string/medication_quantity"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/error_icon_medication_quantity"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/error_icon_medicine_quantity"
+            android:src="@drawable/ic_baseline_error_24"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- Keterangan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/medicine_information"
+        android:textSize="16sp" />
+
+    <!-- Pilihan Diminum Sebelum/Makan -->
+    <RadioGroup
+        android:id="@+id/intake_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/before_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consumed_before_eating" />
+
+        <RadioButton
+            android:id="@+id/after_meal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consumed_after_eating" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/error_icon_intake"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/error_icon_intake"
+        android:src="@drawable/ic_baseline_error_24"
+        android:visibility="gone" />
+
+    <!-- Pilihan Waktu (Menyamping) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <CheckBox
+            android:id="@+id/morning_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/morning" />
+
+        <CheckBox
+            android:id="@+id/afternoon_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/afternoon" />
+
+        <CheckBox
+            android:id="@+id/evening_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/night" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/error_icon_time"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/error_icon_time"
+        android:src="@drawable/ic_baseline_error_24"
+        android:visibility="gone" />
+</LinearLayout>

@@ -13,11 +13,13 @@
         tools:targetApi="31">
 
         <!-- Activity untuk Register -->
-        <activity android:name=".ui.auth.RegisterActivity"
+        <activity
+            android:name=".ui.auth.RegisterActivity"
             android:exported="false" />
 
         <!-- Activity untuk Login -->
-        <activity android:name=".ui.auth.LoginActivity"
+        <activity
+            android:name=".ui.auth.LoginActivity"
             android:exported="false" />
 
         <!-- Activity utama -->
@@ -40,17 +42,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Activity untuk ScheduleDetail -->
-        <activity
-            android:name=".ui.history.ScheduleDetailActivity"
-            android:exported="false" />
-
-        <!-- Activity untuk AddSchedule -->
-        <activity
-            android:name=".ui.history.AddScheduleActivity"
-            android:exported="false" />
-
     </application>
-
 </manifest>

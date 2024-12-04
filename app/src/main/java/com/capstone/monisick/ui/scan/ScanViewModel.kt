@@ -1,13 +1,12 @@
-package com.capstone.monisick.ui.home
+package com.capstone.monisick.ui.scan
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
-
+class ScanViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "Health Monitor"
+        value = "This is Scan Fragment"
     }
     val text: LiveData<String> = _text
 }

@@ -13,35 +13,33 @@
         android:layout_margin="16dp"
         android:elevation="4dp"
         app:cardCornerRadius="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/placeholder_icon"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/placeholder_description"
-                android:src="@drawable/ic_place_holder"
-                android:layout_gravity="center_horizontal" />
+                android:src="@drawable/ic_place_holder" />
 
             <TextView
                 android:id="@+id/text_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Health Monitor"
+                android:text="@string/health_monitor"
                 android:textAlignment="center"
                 android:textSize="18sp" />
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

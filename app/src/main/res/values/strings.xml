@@ -1,24 +1,68 @@
 <resources>
+    // System
     <string name="app_name">Monisick</string>
+    <string name="icon_monisick">Ikon Monisick</string>
+
+    // Navigation
     <string name="title_home">Dasboard</string>
     <string name="title_scan">Scan</string>
     <string name="title_history">History</string>
 
-    <string name="placeholder_description">Health Monitor Placeholder</string>
-
+    // Login and Register
+    <string name="dont_have_an_account">Belum punya akun?</string>
+    <string name="register_now">Daftar Sekarang</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="Register">Daftar</string>
+    <string name="already_have_an_account">Sudah punya akun?</string>
+    <string name="login">Masuk</string>
     <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
-    <string name="email_error">Invalid email format.</string>
-    <string name="password_error">Password must at least 8 chars.</string>
-    <string name="password_confirmation_hint">Confirm Password</string>
-    <string name="name">Name</string>
-    <string name="name_error">Name musn\'t be empty!</string>
-    <string name="form_error">Form must be filled correctly.</string>
+    <string name="password_hint">Kata Sandi</string>
+    <string name="email_error">Format email tidak valid.</string>
+    <string name="password_error">Kata sandi minimal harus 8 karakter!.</string>
+    <string name="password_confirmation_hint">Konfirmasi Kata Sandi</string>
+    <string name="name">Nama</string>
+    <string name="name_error">Nama wajib diisi!</string>
+    <string name="form_error">Formulir harus diisi dengan benar!.</string>
+    <string name="input_name">Masukkan Nama Pengguna Anda</string>
+    <string name="input_email">Masukkan Email Anda</string>
+    <string name="enter_password">Masukkan Kata Sandi Anda</string>
+    <string name="empty_pass">Kata Sandi Kosong</string>
 
-    <string name="input_name">Enter Your Username</string>
-    <string name="input_email">Enter Your Email</string>
-    <string name="enter_password">Enter Password</string>
-    <string name="empty_pass">Password Empty</string>
-    <string name="logout">logout</string>
+    // Dashboard
+    <string name="health_monitor">Monitor Kesehatan</string>
+    <string name="placeholder_description">Placeholder Monitor Kesehatan</string>
+    <string name="logout">Keluar</string>
 
+    // Dialog Add Schedule
+    <string name="schedule_name">Nama Jadwal</string>
+    <string name="from_start_date_to_end_date">Dari: Tanggal Mulai Sampai: Tanggal Berakhir</string>
+    <string name="patient_name">Nama Pasien</string>
+    <string name="error_icon_name_patient">Kesalahan Icon</string>
+    <string name="start_date">Tanggal Mulai</string>
+    <string name="error_icon_start_date">Error Icon</string>
+    <string name="end_date">Tanggal Selesai</string>
+    <string name="error_icon_end_date">Kesalahan Icon</string>
+    <string name="medicine_data">Data Obat</string>
+    <string name="medicine_name">Nama Obat</string>
+    <string name="error_icon_medicine_name">Kesalahan Icon</string>
+    <string name="medication_quantity">Jumlah Obat</string>
+    <string name="error_icon_medicine_quantity">Error Icon</string>
+    <string name="medicine_information">Keterangan</string>
+    <string name="consumed_before_eating">Diminum Sebelum Makan</string>
+    <string name="consumed_after_eating">Diminum Setelah Makan</string>
+    <string name="error_icon_intake">Error Icon</string>
+    <string name="morning">Pagi</string>
+    <string name="afternoon">Siang</string>
+    <string name="night">Malam</string>
+    <string name="error_icon_time">Kesalahan Icon</string>
+
+    // Item History
+    //<string name="delete_button">Tombol hapus</string>
+
+    // Top Toolbar
+    <string name="title_toolbar">Judul bilah alat</string>
+    <string name="button_back">Tombol Kembali</string>
 </resources>

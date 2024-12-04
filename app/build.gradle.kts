@@ -84,11 +84,8 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.github.kirich1409:viewbindingpropertydelegate:1.5.3")
 
-    // Image and network libraries
+    // glide
     implementation("com.github.bumptech.glide:glide:4.15.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
 
     // Coroutine support
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0-RC")
@@ -96,6 +93,12 @@ dependencies {
     // Moshi for JSON
     implementation("com.squareup.moshi:moshi:1.13.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
 
     // CameraX
     implementation("androidx.camera:camera-camera2:1.4.0-beta01")

@@ -2,31 +2,28 @@ package com.capstone.monisick.ui.splash
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.os.Build
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.capstone.monisick.R
 import com.capstone.monisick.ui.auth.LoginActivity
 
+@Suppress("DEPRECATION")
 @SuppressLint("CustomSplashScreen")
-class SplashActivity:AppCompatActivity() {
-
-    private val DURATION_TIME = 3000L
-
+class SplashActivity : AppCompatActivity() {
+    private val durationTime = 3000L
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-
         Handler().postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
-        }, DURATION_TIME)
-
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, durationTime)
         setupView()
-
     }
 
     private fun setupView() {
@@ -41,5 +38,4 @@ class SplashActivity:AppCompatActivity() {
         }
         supportActionBar?.hide()
     }
-
 }

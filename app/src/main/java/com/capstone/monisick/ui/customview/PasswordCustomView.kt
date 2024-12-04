@@ -15,10 +15,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.capstone.monisick.R
 
-
-class PasswordCustomView: AppCompatEditText {
-
-
+class PasswordCustomView : AppCompatEditText {
     private lateinit var passwordIcon: Drawable
     private lateinit var visibilityOnIcon: Drawable
     private lateinit var visibilityOffIcon: Drawable
@@ -32,7 +29,11 @@ class PasswordCustomView: AppCompatEditText {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
@@ -43,31 +44,28 @@ class PasswordCustomView: AppCompatEditText {
 
     private fun init() {
         passwordIcon = ContextCompat.getDrawable(context, R.drawable.ic_lock_24) as Drawable
-        visibilityOnIcon = ContextCompat.getDrawable(context, R.drawable.ic_visibility_on) as Drawable
-        visibilityOffIcon = ContextCompat.getDrawable(context, R.drawable.ic_visibility_off) as Drawable
-
+        visibilityOnIcon =
+            ContextCompat.getDrawable(context, R.drawable.ic_visibility_on) as Drawable
+        visibilityOffIcon =
+            ContextCompat.getDrawable(context, R.drawable.ic_visibility_off) as Drawable
         inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         compoundDrawablePadding = 16
-        setHint(context.getString(R.string.password_hint))
-
+        hint = context.getString(R.string.password_hint)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             setAutofillHints(AUTOFILL_HINT_PASSWORD)
         }
-
         setCompoundDrawablesWithIntrinsicBounds(passwordIcon, null, visibilityOffIcon, null)
         handlePasswordVisibilityToggle()
-
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // Do Nothing
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (!s.isNullOrEmpty() && s.length < 8) error = context.getString(R.string.password_error)
+                if (s.isNotEmpty() && s.length < 8) error =
+                    context.getString(R.string.password_error)
             }
 
             override fun afterTextChanged(s: Editable) {
-                //Do nothing
             }
         })
     }
@@ -76,7 +74,6 @@ class PasswordCustomView: AppCompatEditText {
     private fun handlePasswordVisibilityToggle() {
         setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                // Check if the user clicked on the drawable (toggle icon) at the end
                 if (event.rawX >= (right - compoundPaddingRight)) {
                     isPasswordVisible = !isPasswordVisible
                     updatePasswordTransformation()
@@ -89,16 +86,12 @@ class PasswordCustomView: AppCompatEditText {
 
     private fun updatePasswordTransformation() {
         if (isPasswordVisible) {
-            // Show password as plain text
             transformationMethod = null
             setCompoundDrawablesWithIntrinsicBounds(passwordIcon, null, visibilityOnIcon, null)
         } else {
-            // Mask password
             transformationMethod = PasswordTransformationMethod.getInstance()
             setCompoundDrawablesWithIntrinsicBounds(passwordIcon, null, visibilityOffIcon, null)
         }
-        // Move cursor to the end of the text
         setSelection(text?.length ?: 0)
     }
-
 }

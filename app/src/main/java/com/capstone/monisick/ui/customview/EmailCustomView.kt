@@ -12,9 +12,7 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.capstone.monisick.R
 
-
-class EmailCustomView: AppCompatEditText {
-
+class EmailCustomView : AppCompatEditText {
     private lateinit var emailIcon: Drawable
 
     constructor(context: Context) : super(context) {
@@ -25,7 +23,11 @@ class EmailCustomView: AppCompatEditText {
         init()
     }
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
@@ -38,19 +40,16 @@ class EmailCustomView: AppCompatEditText {
             setAutofillHints(AUTOFILL_HINT_EMAIL_ADDRESS)
         }
         setDrawable(emailIcon)
-
         addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // Do Nothing
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (!s.isNullOrEmpty() && !Patterns.EMAIL_ADDRESS.matcher(s).matches())
+                if (s.isNotEmpty() && !Patterns.EMAIL_ADDRESS.matcher(s).matches())
                     error = context.getString(R.string.email_error)
             }
 
             override fun afterTextChanged(s: Editable) {
-                //Do nothing
             }
         })
     }
@@ -63,5 +62,4 @@ class EmailCustomView: AppCompatEditText {
     ) {
         setCompoundDrawablesWithIntrinsicBounds(start, top, end, bottom)
     }
-
 }

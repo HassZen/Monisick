@@ -17,7 +17,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Schedule Name"
+            android:text="@string/schedule_name"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/deleteButton"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
-            android:text="From: Start Date To: End Date"
+            android:text="@string/from_start_date_to_end_date"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@id/deleteButton"
@@ -43,11 +43,11 @@
             android:layout_height="32dp"
             android:layout_marginStart="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/delete_button"
             android:src="@drawable/ic_delete"
-            app:tint="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:tint="?attr/colorPrimary" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.cardview.widget.CardView>
