@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scan_navigation"
+    app:startDestination="@id/cameraFragment">
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.capstone.monisick.ui.scan.result.CameraFragment"
+        android:label="CameraFragment" >
+        <action
+            android:id="@+id/action_cameraFragment2_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.capstone.monisick.ui.scan.result.ResultFragment"
+        android:label="ResultFragment" >
+        <argument
+            android:name="resultImage"
+            app:argType="com.capstone.monisick.data.database.entity.ImageResult" />
+    </fragment>
+
+</navigation>

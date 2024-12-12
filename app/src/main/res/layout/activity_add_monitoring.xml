@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Tambahkan Jadwal Monitoring"
+        android:hint="@string/monitoring_schedule_input"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Tanggal Mulai"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="@string/start_date_monitoring"
+        android:inputType="date"
+        tools:ignore="KeyboardInaccessibleWidget" />
+
+    <EditText
+        android:id="@+id/endDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Tanggal Selesai"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="@string/end_date_monitoring"
+        android:inputType="date"
+        tools:ignore="KeyboardInaccessibleWidget" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_schedule" />
+</LinearLayout>

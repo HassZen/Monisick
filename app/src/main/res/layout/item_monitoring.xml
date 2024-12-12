@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitleMonitoring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/health_monitor"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/placeholder_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/placeholder_description"
+            android:src="@drawable/ic_place_holder" />
+
+        <TextView
+            android:id="@+id/tvPeriode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/periode_06_12_2024_08_12_2024"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

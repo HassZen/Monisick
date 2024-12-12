@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/today_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints="Date"
+        android:background="@drawable/custom_input"
+        android:hint="@string/_24_09_2024"
+        android:inputType="date"
+        android:paddingStart="8dp"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/input_log"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="24sp"
+        android:autofillHints="input_log"
+        android:background="@drawable/custom_input"
+        android:gravity="start|top"
+        android:hint="@string/input_log"
+        android:inputType="textMultiLine"
+        android:paddingStart="8dp"
+        android:textAlignment="viewStart"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/green1"
+            android:text="@string/save" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background"
+            android:text="@string/cancel" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:contentDescription="@string/delete_button"
+            android:src="@drawable/ic_delete"
+            app:tint="?attr/colorPrimary" />
+    </LinearLayout>
+</LinearLayout>

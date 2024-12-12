@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon_moni"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Monisick.Light"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.monitoring.MonitoringDetailActivity"
+            android:exported="false" />
+        <!-- Activity untuk Register -->
+        <activity
+            android:name=".ui.auth.register.RegisterActivity"
+            android:exported="false" /> <!-- Activity untuk Login -->
+        <activity
+            android:name=".ui.auth.login.LoginActivity"
+            android:exported="false" /> <!-- Activity utama -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" /> <!-- Activity untuk Splash Screen -->
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Activity untuk ScheduleDetail -->
+        <!-- <activity -->
+        <!-- android:name=".ui.history.ScheduleDetailActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- Activity untuk AddSchedule -->
+        <activity
+            android:name=".ui.scan.result.ScanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history.log.AddLogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.AddMonitoringActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
